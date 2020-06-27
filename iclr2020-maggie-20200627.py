@@ -19,7 +19,7 @@ def DownloadPaper(paper_dic_i):
     paper_res=urllib.request.urlopen(paper_req)#发送请求对象req
     paper_res_data=paper_res.read()#获取res响应体中的内容
     #print(res2_data)
-    papername = paper_dic_i["content"]["title"].replace(" ","_").replace(":","").replace("?","").replace("/","_").replace("|","_").replace(":","").replace('"','').replace("$","")
+    papername = paper_dic_i["content"]["title"].replace(" ","_").replace(":","").replace("?","").replace("/","_").replace("|","_").replace(":","").replace('"','').replace("$","").replace("\\","_")
 #   with open('C:\\Users\\maggie\\.spyder-py3\\ICLR2020\\'+papername+".pdf","wb") as code:
     with open(papername+".pdf","wb") as code:
             code.write(paper_res_data)
