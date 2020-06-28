@@ -92,8 +92,12 @@ def DownloadProceeding(url_i,folder_i):
         DownloadPaper(paper_dic[i],folder_i)
  
  
-urls=['249','252','255','258']
-folder=['1','4','7','10']
+#urls=['249','252','255','258']
+#folder=['1','4','7','10']
+#tissue 4有一篇paper过大 不能用urllib下 以后再debug
+
+urls=['249','255','258']
+folder=['1','7','10']
 
 for i in range(len(urls)):
     DownloadProceeding(urls[i],folder[i])
